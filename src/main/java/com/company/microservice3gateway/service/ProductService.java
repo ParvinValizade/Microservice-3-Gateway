@@ -1,5 +1,6 @@
 package com.company.microservice3gateway.service;
 
+import com.company.microservice3gateway.dto.CreateProductRequest;
 import com.company.microservice3gateway.request.ProductServiceRequest;
 import com.company.microservice3gateway.util.RetrofitUtils;
 import com.google.gson.JsonElement;
@@ -16,7 +17,7 @@ public class ProductService {
         this.productServiceRequest = productServiceRequest;
     }
 
-    public JsonElement createProduct(JsonElement requestBody){
+    public JsonElement createProduct(CreateProductRequest requestBody){
         return RetrofitUtils.executeInBlock(productServiceRequest.createProduct(requestBody));
     }
 

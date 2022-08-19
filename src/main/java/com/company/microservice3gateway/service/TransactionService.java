@@ -1,5 +1,6 @@
 package com.company.microservice3gateway.service;
 
+import com.company.microservice3gateway.dto.CreateTransactionRequest;
 import com.company.microservice3gateway.request.TransactionServiceRequest;
 import com.company.microservice3gateway.util.RetrofitUtils;
 import com.google.gson.JsonElement;
@@ -16,7 +17,7 @@ public class TransactionService {
         this.transactionServiceRequest = transactionServiceRequest;
     }
 
-    public JsonElement createTransaction(JsonElement transaction){
+    public JsonElement createTransaction(CreateTransactionRequest transaction){
         return RetrofitUtils.executeInBlock(transactionServiceRequest.createTransaction(transaction));
     }
 

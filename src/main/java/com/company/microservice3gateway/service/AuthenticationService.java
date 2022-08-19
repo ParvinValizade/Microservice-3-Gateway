@@ -1,6 +1,6 @@
 package com.company.microservice3gateway.service;
 
-import com.company.microservice3gateway.dto.UserDto;
+import com.company.microservice3gateway.dto.SignInRequest;
 import com.company.microservice3gateway.security.UserPrincipal;
 import com.company.microservice3gateway.security.jwt.JwtProvider;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,7 +19,7 @@ public class AuthenticationService {
         this.jwtProvider = jwtProvider;
     }
 
-    public String singInAndReturnJWT(UserDto signInRequest){
+    public String singInAndReturnJWT(SignInRequest signInRequest){
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(signInRequest.getUsername(),signInRequest.getPassword())
         );

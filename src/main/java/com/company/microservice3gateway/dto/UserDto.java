@@ -1,6 +1,5 @@
 package com.company.microservice3gateway.dto;
 
-import javax.persistence.Column;
 import java.time.LocalDateTime;
 
 public class UserDto {
