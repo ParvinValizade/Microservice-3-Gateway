@@ -5,8 +5,6 @@ import com.company.microservice3gateway.dto.SignInRequest;
 import com.company.microservice3gateway.dto.UserDto;
 import com.company.microservice3gateway.service.AuthenticationService;
 import com.company.microservice3gateway.service.UserService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
